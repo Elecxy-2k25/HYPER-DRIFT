@@ -106,7 +106,22 @@ nav ul li a:hover, nav ul li a.active {
     transition: 0.3s;
 }
 
-.filter-buttons:hover, .filter-button.active {
+.portfolio-item {
+    display: block; /* Ensures they are visible initially */
+    transition: all 0.3s ease-in-out;
+}
+
+.filter-btn {
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: #ff5733;
+    color: white;
+}
+
+
+.filter-btn:hover, .filter-btn.active {
     background: #e6b800;
 }
 
