@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll(".filter-btn");
+    const buttons = document.querySelectorAll(".filter-buttons");
     const items = document.querySelectorAll(".portfolio-item");
 
     buttons.forEach(button => {
