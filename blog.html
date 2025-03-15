@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        .more-content {
+            display: none; /* Initially hidden */
+            margin-top: 10px; /* Adds space when revealed */
+        }
+        
+        .blog-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .read-more {
+            margin-top: 10px; /* Moves button down when more content appears */
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">HYPER DRIFT</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="esports.html">Esports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <h2>Latest Blogs</h2>
+        <p>Stay updated with industry trends, insights, and behind-the-scenes stories.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-container">
+        <div class="blog-card">
+            <img src="images/blog1.jpg" alt="Blog 1">
+            <h3>The Future of Live Streaming</h3>
+            <p>Streamer & Esports Integration</p>
+            <div class="more-content">
+                <p>More racing esports events with professional streamers participating.</p>
+                <p>Twitch & YouTube partnerships for live-streamed tournaments.</p>
+                <p>Spectator Mode with Commentary for enhanced viewer experience.</p>
+            </div>
+            <button class="read-more">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/blog2.jpg" alt="Blog 2">
+            <h3>Social Media Marketing Trends</h3>
+            <p>Stay ahead in the game with the latest marketing strategies.</p>
+            <div class="more-content">
+                <p>Marketing on social media is constantly evolving. Short-form videos, influencer marketing, and AI-powered content creation are shaping 2025's landscape. Read this blog to learn how to adapt and stay ahead.</p>
+            </div>
+            <button class="read-more">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/blog3.jpg" alt="Blog 3">
+            <h3>Event Planning 101</h3>
+            <p>Learn how to organize seamless and impactful events.</p>
+            <div class="more-content">
+                <p>Successful event planning requires strategy, technology, and audience engagement. Learn essential tips to create memorable events, whether online or in person.</p>
+            </div>
+            <button class="read-more">Read More</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Hyper Drift. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function () {
+                const moreContent = this.previousElementSibling;
+                if (moreContent.style.display === 'block') {
+                    moreContent.style.display = 'none';
+                    this.textContent = 'Read More';
+                } else {
+                    moreContent.style.display = 'block';
+                    this.textContent = 'Read Less';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
