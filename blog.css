@@ -117,7 +117,7 @@ nav ul li a:hover {
     text-align: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: overlay;
+    /*background-blend-mode: overlay;*/
     flex-direction: column;
     margin-top: 70px;
 }
