@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('contact.jpg') no-repeat center center/cover;
+    /*background: #121212;*/
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Navigation */
+header {
+    background: #222;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 15px 5%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto; /* Push logo to the left */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align navigation items to the right */
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.contact-hero {
+    padding: 120px 20px 50px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Chatbot Section */
+.chatbot {
+    margin: 40px 0;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-box {
+    padding: 15px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    /*background: rgba(255, 255, 255, 0.1);*/
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.contact-form form {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Input Fields */
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input,
+.input-box textarea {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 12px;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Send Button */
+.send-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.send-btn:hover {
+    background: #0056b3;
+}
+
+/* Physical Assistance Section */
+.physical-assistant {
+    margin: 50px 0;
+}
+
+.office-location iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .contact-form form,
+    .chat-box,
+    .office-location iframe {
+        width: 90%;
+    }
+}
