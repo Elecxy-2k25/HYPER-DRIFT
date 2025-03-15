@@ -1,6 +1,5 @@
-
 document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll(".filter-buttons");
+    const buttons = document.querySelectorAll(".filter-btn");
     const items = document.querySelectorAll(".portfolio-item");
 
     buttons.forEach(button => {
@@ -20,4 +19,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
