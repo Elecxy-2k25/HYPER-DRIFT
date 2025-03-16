@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    /*background: url('contact1.jpg') no-repeat center center/cover;*/
+    background: url('contact.jpg') no-repeat center center/cover;
     background-color: #222;
     color: #fff;
     margin: 0;
@@ -10,6 +10,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Navigation Bar */
 /* Navigation Bar */
 header {
     display: flex;
@@ -23,6 +24,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 /* Logo */
@@ -34,14 +36,38 @@ header {
 
 /* Navigation */
 nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap if needed */
+    justify-content: center;
     list-style: none;
     padding: 0;
-    display: flex;
     margin: 0;
+    flex-grow: 1; /* This ensures the nav takes up the remaining space */
 }
 
+/* Ensure nav items do not overflow */
 nav ul li {
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 10px;
+    white-space: nowrap; /* Prevents breaking words */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+
+/* Ensure nav items do not overflow */
+header {
+    width: 100%;
+    overflow: hidden;
 }
 
 nav ul li a {
