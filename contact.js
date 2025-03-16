@@ -40,6 +40,7 @@ function getBotResponse(input) {
         "working hours": "Monday - Friday, 9:00 AM - 6:00 PM.",
         "appointment": "To schedule an appointment, visit our contact page or call us.",
         "default": "I'm sorry, I didn't understand that. Can you rephrase?"
+        "help": "How Can I help you?"
     };
 
     return responses[input] || responses["default"];
@@ -49,7 +50,7 @@ function getBotResponse(input) {
 document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const scriptURL = "https://script.google.com/macros/s/your-script-id/exec"; // Replace with your Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyHAgjzEFhVvBUZelzmbzdgnnK8xEqxxIc3-XJEYNWii6C8Z6W_GLVRIyhFbAwgyn2PCw/exec"; // Replace with your Web App URL
 
     let formData = {
         name: document.getElementById("name").value,
