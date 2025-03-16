@@ -8,10 +8,7 @@
 </head>
 <body>
 
-    <script src="contact.js"></script>
-
     <!-- Navigation Bar -->
-    
     <header>
         <div class="logo">HYPER DRIFT</div>
         <nav>
@@ -28,61 +25,46 @@
         </nav>
     </header>
 
-
     <!-- Hero Section -->
     <section class="contact-hero">
         <h1>Contact Us</h1>
         <p>We’d love to hear from you! Reach out to us for any inquiries or collaborations.</p>
     </section>
 
-    <!-- Virtual Assistant (AI Chatbot) Section -->
-    <section class="chatbot">
-        <h2>Chat with Our Virtual Assistant</h2>
-        <div class="chat-container">
+    <!-- Virtual Assistant (AI Chatbot) -->
+    <section class="chatbot-section">
+        <button class="chat-toggle-btn" onclick="toggleChat()">💬 Chat with AI</button>
+        <div class="chat-container" id="chat-container">
             <div class="chat-box" id="chat-box">
                 <p class="bot-message">Hello! How can I assist you today?</p>
                 <input type="text" id="user-input" placeholder="Type your message...">
                 <button onclick="sendMessage()">Send</button>
+                <button class="close-btn" onclick="toggleChat()">❌ Close</button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Contact Form -->
     <section class="contact-form">
-    <form id="contact-form">
-    <h2>Get in Touch</h2>
-
-    <div class="input-box">
-        <input type="text" id="Name" required placeholder="Name">
-    </div>
-
-    <div class="input-box">
-        <input type="email" id="Email" required placeholder="Email">
-    </div>
-
-    <div class="input-box">
-        <textarea id="AnyComments" required placeholder="AnyComments"></textarea>
-    </div>
-
-    <button type="submit" class="send-btn">Send</button>
-    <p id="response-message"></p>
-</form>
-
-
-
-    <!-- Physical Assistance Section -->
-    <section class="physical-assistant">
-        <h2>Visit Our Office</h2>
-        <p>Our team is ready to assist you in person.</p>
-        <div class="office-location">
-            <p>📍 S.P.G, Chidambara Nadar, C, Nagammal Campus, Vellakulam, Tamil Nadu 625701</p>
-            <iframe src="https://www.google.com/maps/place/Kamaraj+College+of+Engineering+%26+Technology+(Autonomous)/@9.6728183,77.9632273,17z/data=!4m14!1m7!3m6!1s0x3b012a8e3d378b53:0x15d8265b00bea0df!2sKamaraj+College+of+Engineering+%26+Technology+(Autonomous)!8m2!3d9.672813!4d77.9658022!16s%2Fm%2F0k0qx4n!3m5!1s0x3b012a8e3d378b53:0x15d8265b00bea0df!8m2!3d9.672813!4d77.9658022!16s%2Fm%2F0k0qx4n?entry=ttu"></iframe>
-        </div>
+        <form id="contact-form">
+            <h2>Get in Touch</h2>
+            <div class="input-box">
+                <input type="text" id="name" required placeholder="Name">
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" required placeholder="Email">
+            </div>
+            <div class="input-box">
+                <textarea id="message" required placeholder="Any Comments"></textarea>
+            </div>
+            <button type="submit" class="send-btn">Send</button>
+            <p id="response-message"></p>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 ABC Studios | Follow us: 
+        <p>&copy; 2025 HYPER DRIFT | Follow us: 
             <a href="#">Facebook</a> | 
             <a href="#">Twitter</a> | 
             <a href="#">Instagram</a> | 
