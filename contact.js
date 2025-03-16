@@ -4,25 +4,33 @@ function toggleChat() {
     chatContainer.style.display = (chatContainer.style.display === "block") ? "none" : "block";
 }
 
-// Function to send a message (basic chatbot logic)
 function sendMessage() {
-    var userInput = document.getElementById("user-input").value;
-    var chatBox = document.getElementById("chat-box");
+    let userInput = document.getElementById("user-input").value.trim();
+    if (userInput === "") return;
 
-    if (userInput.trim() !== "") {
-        var userMessage = document.createElement("p");
-        userMessage.classList.add("user-message");
-        userMessage.innerText = "You: " + userInput;
+    let chatBox = document.getElementById("chat-box");
 
-        var botMessage = document.createElement("p");
-        botMessage.classList.add("bot-message");
-        botMessage.innerText = "Bot: I'm here to help!";
+    // Display user message
+    let userMessage = document.createElement("p");
+    userMessage.className = "user-message";
+    userMessage.textContent = userInput;
+    chatBox.appendChild(userMessage);
 
-        chatBox.appendChild(userMessage);
+    // Generate bot response
+    let botMessage = document.createElement("p");
+    botMessage.className = "bot-message";
+    
+    let response = getBotResponse(userInput);
+    botMessage.textContent = response;
+    
+    // Display bot response
+    setTimeout(() => {
         chatBox.appendChild(botMessage);
-        
-        document.getElementById("user-input").value = ""; // Clear input
-    }
+        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to latest message
+    }, 500);
+
+    // Clear input field
+    document.getElementById("user-input").value = "";
 }
 
 // Handle contact form submission
