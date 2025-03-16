@@ -49,7 +49,7 @@ function getBotResponse(input) {
 document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyHAgjzEFhVvBUZelzmbzdgnnK8xEqxxIc3-XJEYNWii6C8Z6W_GLVRIyhFbAwgyn2PCw/exec"; // Replace with your Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyhAsZeTk56lVzejsEaaRpdnr-_Q4V6Hg6lq88xWnCKDXX-eHvklA4NX2GHezHSTJADxg/exec"; // Replace with your Web App URL
 
     let formData = {
         Name: document.getElementById("Name").value,
