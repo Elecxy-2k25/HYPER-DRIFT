@@ -38,8 +38,6 @@ function getBotResponse(input) {
     
     const responses = {
         "hello": "Hello! How can I help you today?",
-        "hi": "Hi! How can I help you today?",
-        "help": "How Can I help you?",
         "services": "We offer Live Streaming, Media Production, Digital Marketing, and Event Management.",
         "pricing": "Our pricing depends on the services required. Please contact us for a quote.",
         "contact": "You can reach us via email at contact@abcstudios.com or call us at +1 234-567-890.",
