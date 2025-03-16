@@ -39,7 +39,7 @@ function getBotResponse(input) {
         "location": "We are located at 123 Business Street, New York, NY 10001.",
         "working hours": "Monday - Friday, 9:00 AM - 6:00 PM.",
         "appointment": "To schedule an appointment, visit our contact page or call us.",
-        "default": "I'm sorry, I didn't understand that. Can you rephrase?"
+        "default": "I'm sorry, I didn't understand that. Can you rephrase?",
         "help": "How Can I help you?"
     };
 
