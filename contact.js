@@ -39,8 +39,7 @@ function getBotResponse(input) {
         "location": "We are located at 123 Business Street, New York, NY 10001.",
         "working hours": "Monday - Friday, 9:00 AM - 6:00 PM.",
         "appointment": "To schedule an appointment, visit our contact page or call us.",
-        "default": "I'm sorry, I didn't understand that. Can you rephrase?",
-        "help": "How Can I help you?"
+        "default": "I'm sorry, I didn't understand that. Can you rephrase?"
     };
 
     return responses[input] || responses["default"];
@@ -53,9 +52,9 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     const scriptURL = "https://script.google.com/macros/s/AKfycbyHAgjzEFhVvBUZelzmbzdgnnK8xEqxxIc3-XJEYNWii6C8Z6W_GLVRIyhFbAwgyn2PCw/exec"; // Replace with your Web App URL
 
     let formData = {
-        Name: document.getElementById("Name").value,
-        Email: document.getElementById("Email").value,
-        AnyComments: document.getElementById("AnyComments").value
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
     };
 
     fetch(scriptURL, {
