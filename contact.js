@@ -55,7 +55,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     let formData = {
         Name: document.getElementById("Name").value,
         Email: document.getElementById("Email").value,
-        AnyComments: document.getElementById("AnyComment").value
+        AnyComments: document.getElementById("AnyComments").value
     };
 
     fetch(scriptURL, {
