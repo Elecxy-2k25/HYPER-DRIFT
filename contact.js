@@ -1,29 +1,26 @@
-document.querySelector("form").addEventListener("submit", async function(event) {
-    event.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const name = document.querySelector("input[type='text']").value;
-    const email = document.querySelector("input[type='email']").value;
-    const message = document.querySelector("textarea").value;
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyNYrLHdk5GdpOnpDgNsod5_d_FLHf7dsttGnKT0ooHzmZ3PPlxflAPoSwKt8ZmbI-wtQ/exec"; // Replace with your Web App URL
 
-    const formData = { name, email, message };
+    let formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwCectGHU6czbww1LLexVmyUQkhSui01yaR4UPIMNUtOnc_83gY6iuD26HZzkWTeBMzbA/exec"; // Replace with your actual Google Apps Script URL
-
-    try {
-        const response = await fetch(scriptURL, {
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: { "Content-Type": "application/json" }
-        });
-
-        const result = await response.json();
-        if (result.result === "success") {
-            alert("Form submitted successfully!");
-        } else {
-            alert("Error submitting form.");
-        }
-    } catch (error) {
+    fetch(scriptURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("response-message").innerText = "Message Sent Successfully!";
+        document.getElementById("contact-form").reset();
+    })
+    .catch(error => {
+        document.getElementById("response-message").innerText = "Error sending message!";
         console.error("Error:", error);
-        alert("Error connecting to the server.");
-    }
+    });
 });
