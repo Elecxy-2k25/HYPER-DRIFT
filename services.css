@@ -1,39 +1,72 @@
-/* Reset and Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+/* Reset all styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header Navigation */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('services2.jpg') no-repeat center center/cover ;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+/* Navigation Bar */
 header {
-    background: #222;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    background: #222;
+    padding: 15px 5%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-header .logo {
+/* Logo */
+.logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
-nav ul {
+/* Navigation Menu */
+nav {
     display: flex;
+    align-items: center;
 }
 
+/* Removing Dots from Navigation */
+nav ul {
+    list-style: none; /* Removes dots */
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Items */
 nav ul li {
+    list-style-type: none; /* Extra layer of security */
+    display: inline-block;
     margin: 0 15px;
 }
 
+/* Nav Links */
 nav ul li a {
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
     transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #007bff;
 }
 
 /* Hero Section */
@@ -59,6 +92,7 @@ nav ul li a {
     padding: 50px;
 }
 
+/* Service Cards */
 .service-card {
     background: white;
     padding: 20px;
@@ -68,7 +102,6 @@ nav ul li a {
     width: 250px;
     transition: transform 0.3s, box-shadow 0.3s;
     animation: fadeInUp 1s ease-in-out;
-    position: relative;
 }
 
 /* Icon Style */
@@ -101,4 +134,21 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
 }
