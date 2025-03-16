@@ -52,9 +52,9 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     const scriptURL = "https://script.google.com/macros/s/AKfycbyHAgjzEFhVvBUZelzmbzdgnnK8xEqxxIc3-XJEYNWii6C8Z6W_GLVRIyhFbAwgyn2PCw/exec"; // Replace with your Web App URL
 
     let formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
+        Name: document.getElementById("Name").value,
+        Email: document.getElementById("Email").value,
+        AnyComments: document.getElementById("AnyComments").value
     };
 
     fetch(scriptURL, {
