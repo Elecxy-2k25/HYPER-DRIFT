@@ -46,25 +46,28 @@
     </section>
 
     <!-- Contact Form Section -->
+   <!-- Contact Form Section -->
     <section class="contact-form">
-        <form>
-            <h2>Get in Touch</h2>
+    <form id="contact-form">
+    <h2>Get in Touch</h2>
 
-            <div class="input-box">
-                <input type="text" required placeholder="Name">
-            </div>
+    <div class="input-box">
+        <input type="text" id="name" required placeholder="Name">
+    </div>
 
-            <div class="input-box">
-                <input type="email" required placeholder="Email">
-            </div>
+    <div class="input-box">
+        <input type="email" id="email" required placeholder="Email">
+    </div>
 
-            <div class="input-box">
-                <textarea required placeholder="Any Comments"></textarea>
-            </div>
+    <div class="input-box">
+        <textarea id="message" required placeholder="Any Comments"></textarea>
+    </div>
 
-            <button type="submit" class="send-btn">Send</button>
-        </form>
-    </section>
+    <button type="submit" class="send-btn">Send</button>
+    <p id="response-message"></p>
+</form>
+
+<script src="contact.js"></script>
 
     <!-- Physical Assistance Section -->
     <section class="physical-assistant">
